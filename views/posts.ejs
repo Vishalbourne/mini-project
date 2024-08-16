@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/styleallposts.css">
+</head>
+<body>
+    <div class="userposts">
+        <p class="posts"> Posts👇</p>
+        <div class="posts">
+                <% allposts.reverse().forEach(function(post){ %>
+                    <div class ="allposts">
+                        <h5 class="username">@<%=post.user.username%></h5>
+                <p class="content"><%=post.content %></a> </p>
+                <small><%=post.likes.length %> likes</small>
+                <div class="smallfunc">
+                    <a href="/like/<%= post._id %>">
+                        <%if(post.likes.indexOf(user._id)===-1){%>
+                            Like
+                        <%}else{%>
+                            Unlike
+                      <%  }%>
+                    </a>
+                    <!-- <a href="">edit</a>
+                    <a href="/delete/<%= post._id %>">delete</a> -->
+                </div>
+                    </div>
+              <%  } ) %>
+        </div>
+    </div>
+</body>
+</html>

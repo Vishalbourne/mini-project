@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/styleprofile.css">
+</head>
+<body>
+    <div class="main">
+        <div class="first">
+            <div class="details">
+                <div class="image"><a href="/upload"><img src="../images/uploads/<%= user.profilepic%>" alt="profilepic"></a></div>
+                <h3 class="name"><span>Hello,<%=user.name %>👋</span></h3>
+            <p class="email"><%=user.email %></p>
+            </div>
+            <div class="logout">
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="create">
+        <h5><span>You can create new post here👇</span></h5>
+        <form action="/post" method="post">
+                <textarea name="content" maxlength="100" rows="8" cols="30" placeholder="What's in your mind?" required></textarea>
+                <input type="submit" class="createbtn" value="Create Post">
+        </form>
+        </div>
+    </div>
+    <div class="userposts">
+        <p class="yourposts">Your Posts👇</p>
+        <div class="posts">
+            <a href="/allposts/<%= user._id%>">allposts</a>
+                <% user.posts.reverse().forEach(function(post){ %>
+                    <div class ="allposts">
+                        <h5 class="username">@<%=user.username%></h5>
+                <p class="content"><%=post.content %></a> </p>
+                <!-- <small><%=post.likes.length %> likes</small> -->
+                <div class="smallfunc">
+                    <!-- <a href="/like/<%= post._id %>">
+                        <%if(post.likes.indexOf(user._id)===-1){%>
+                            Like
+                        <%}else{%>
+                            Unlike
+                      <%  }%>
+                    </a> -->
+                    <a href="">edit</a>
+                    <a href="/delete/<%= post._id %>">delete</a>
+                </div>
+                    </div>
+              <%  } ) %>
+        </div>
+    </div>
+</body>
+</html>
