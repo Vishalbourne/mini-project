@@ -21,3 +21,13 @@ This project is a simple platform that allows users to post and share their thou
 - **JSON Web Token (JWT)**: Used for secure user authentication and maintaining sessions.
 - **CSS/Bootstrap**: For styling the user interface.
 
+## Demo
+
+![Screenshot 2024-08-16 193943](https://github.com/user-attachments/assets/6792d0d8-929d-41af-914b-7d1d075a86d1)
+
+
+
+![Screenshot 2024-08-16 194054](https://github.com/user-attachments/assets/5a105997-771d-4e13-8644-b4c979a194dd)
+
+
+![Screenshot 2024-08-16 194132](https://github.com/user-attachments/assets/bcdfad6c-fcce-4351-838d-2ec6a3c08e64)
